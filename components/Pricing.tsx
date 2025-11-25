@@ -1,0 +1,1 @@
+export default function Pricing() { return <div className="p-4 border border-red-300 bg-red-50 text-red-700 rounded">Component Pricing failed to generate.</div>; }
