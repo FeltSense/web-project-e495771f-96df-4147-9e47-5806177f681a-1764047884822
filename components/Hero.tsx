@@ -16,9 +16,7 @@ export default function Hero() {
       image: 'photo-1571019614242-c5c5dee9f50b',
       stats: { weeks: '0-12', focus: 'Foundation', intensity: '40%' },
       badge: '🌱 ROOKIE',
-      color: 'blue-600',
-      textColor: 'text-blue-600',
-      bgColor: 'bg-blue-600'
+      color: 'blue-600'
     },
     intermediate: {
       title: 'UNLEASH YOUR POTENTIAL',
@@ -27,9 +25,7 @@ export default function Hero() {
       image: 'photo-1534438327276-14e5300c3a48',
       stats: { weeks: '12-24', focus: 'Strength', intensity: '70%' },
       badge: '💪 WARRIOR',
-      color: 'orange-600',
-      textColor: 'text-orange-600',
-      bgColor: 'bg-orange-600'
+      color: 'orange-600'
     },
     advanced: {
       title: 'DOMINATE YOUR GOALS',
@@ -38,9 +34,7 @@ export default function Hero() {
       image: 'photo-1583454110551-21f2fa2afe61',
       stats: { weeks: '24+', focus: 'Mastery', intensity: '95%' },
       badge: '🔥 CHAMPION',
-      color: 'yellow-400',
-      textColor: 'text-yellow-400',
-      bgColor: 'bg-yellow-400'
+      color: 'yellow-400'
     }
   };
 
@@ -86,13 +80,13 @@ export default function Hero() {
                 {currentLevel.title.split(' ').map((word, index) => (
                   <span
                     key={index}
-                    className={`inline-block ${index === currentLevel.title.split(' ').length - 1 ? currentLevel.textColor : ''} hover:scale-105 transition-transform duration-300 cursor-default`}
+                    className={`inline-block ${index === currentLevel.title.split(' ').length - 1 ? `text-${currentLevel.color}` : ''} hover:scale-105 transition-transform duration-300 cursor-default`}
                   >
                     {word}{' '}
                   </span>
                 ))}
               </h1>
-              <div className={`h-2 w-32 ${currentLevel.bgColor} mt-4 animate-pulse`}></div>
+              <div className={`h-2 w-32 bg-${currentLevel.color} mt-4 animate-pulse`}></div>
             </div>
 
             {/* Subtitle */}
@@ -146,7 +140,7 @@ export default function Hero() {
                     onClick={() => setFitnessLevel(level)}
                     className={`w-full p-5 text-left font-bold text-lg tracking-wide transition-all duration-300 border-l-8 ${
                       fitnessLevel === level
-                        ? `${levelContent[level].bgColor} border-yellow-400 text-white scale-105 shadow-lg`
+                        ? `bg-${levelContent[level].color} border-yellow-400 text-white scale-105 shadow-lg`
                         : 'bg-slate-700/50 border-slate-600 text-gray-300 hover:bg-slate-700 hover:border-orange-600'
                     }`}
                   >
