@@ -111,114 +111,178 @@ export default function TestimonialsPage() {
   };
 
   return (
-    <section id="testimonials" className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 py-20 px-4 relative overflow-hidden">
-      {/* Geometric Background Patterns - Weight Plate Inspired */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-64 h-64 border-8 border-orange-600 rounded-full"></div>
-        <div className="absolute top-40 left-32 w-48 h-48 border-8 border-blue-600 rounded-full"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 border-8 border-yellow-400 rounded-full"></div>
-        <div className="absolute bottom-40 right-40 w-32 h-32 border-8 border-orange-600 rounded-full"></div>
-      </div>
+    <>
+      <section id="testimonials" className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 py-20 px-4 relative overflow-hidden">
+        {/* Geometric Background Patterns - Weight Plate Inspired */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-64 h-64 border-8 border-orange-600 rounded-full"></div>
+          <div className="absolute top-40 left-32 w-48 h-48 border-8 border-blue-600 rounded-full"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 border-8 border-yellow-400 rounded-full"></div>
+          <div className="absolute bottom-40 right-40 w-32 h-32 border-8 border-orange-600 rounded-full"></div>
+        </div>
 
-      {/* Diagonal Stripes - Gym Floor Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(249, 115, 22, 0.3) 50px, rgba(249, 115, 22, 0.3) 51px)'
-        }}></div>
-      </div>
+        {/* Diagonal Stripes - Gym Floor Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(249, 115, 22, 0.3) 50px, rgba(249, 115, 22, 0.3) 51px)'
+          }}></div>
+        </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <div className="flex items-center gap-3 bg-orange-600/20 border-2 border-orange-600 px-6 py-2 rounded-full">
-              <span className="text-2xl">🏆</span>
-              <span className="text-orange-400 font-bold text-sm tracking-widest">TRANSFORMATION UNLOCKED</span>
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <div className="flex items-center gap-3 bg-orange-600/20 border-2 border-orange-600 px-6 py-2 rounded-full">
+                <span className="text-2xl">🏆</span>
+                <span className="text-orange-400 font-bold text-sm tracking-widest">TRANSFORMATION UNLOCKED</span>
+              </div>
             </div>
+            <h1 className="text-6xl md:text-7xl font-black text-white mb-6">
+              REAL PEOPLE.<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-400 to-orange-600">
+                REAL RESULTS.
+              </span>
+            </h1>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+              Every achievement badge earned. Every milestone crushed. Every excuse destroyed.
+              <br />
+              <span className="text-yellow-400 font-bold">These are the legends we&apos;ve forged.</span>
+            </p>
           </div>
-          <h1 className="text-6xl md:text-7xl font-black text-white mb-6">
-            REAL PEOPLE.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-400 to-orange-600">
-              REAL RESULTS.
-            </span>
-          </h1>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
-            Every achievement badge earned. Every milestone crushed. Every excuse destroyed.
-            <br />
-            <span className="text-yellow-400 font-bold">These are the legends we've forged.</span>
-          </p>
-        </div>
 
-        {/* Live Stats Banner */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 max-w-5xl mx-auto">
-          {[
-            { value: "942", label: "Total Transformations", icon: "⚡" },
-            { value: "12.4K", label: "Workouts This Month", icon: "💪" },
-            { value: "87%", label: "Goal Achievement Rate", icon: "🎯" },
-            { value: "4.9★", label: "Member Rating", icon: "⭐" }
-          ].map((stat, idx) => (
-            <div key={idx} className="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-blue-600/30 rounded-xl p-4 text-center transform hover:scale-105 transition-transform">
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-3xl font-black text-orange-600 mb-1">{stat.value}</div>
-              <div className="text-xs text-blue-300 uppercase tracking-wide">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+          {/* Live Stats Banner */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 max-w-5xl mx-auto">
+            {[
+              { value: "942", label: "Total Transformations", icon: "⚡" },
+              { value: "12.4K", label: "Workouts This Month", icon: "💪" },
+              { value: "87%", label: "Goal Achievement Rate", icon: "🎯" },
+              { value: "4.9★", label: "Member Rating", icon: "⭐" }
+            ].map((stat, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-blue-600/30 rounded-xl p-4 text-center transform hover:scale-105 transition-transform">
+                <div className="text-3xl mb-2">{stat.icon}</div>
+                <div className="text-3xl font-black text-orange-600 mb-1">{stat.value}</div>
+                <div className="text-xs text-blue-300 uppercase tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
 
-        {/* Testimonial Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="group relative h-[700px] perspective-1000"
-              onClick={() => toggleFlip(testimonial.id)}
-            >
+          {/* Testimonial Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {testimonials.map((testimonial) => (
               <div
-                className={`relative w-full h-full transition-transform duration-700 transform-style-3d cursor-pointer ${
-                  flippedCards[testimonial.id] ? 'rotate-y-180' : ''
-                }`}
+                key={testimonial.id}
+                className="group relative h-[700px]"
+                style={{ perspective: '1000px' }}
+                onClick={() => toggleFlip(testimonial.id)}
               >
-                {/* FRONT - Transformation Images */}
-                <div className="absolute inset-0 backface-hidden">
-                  <div className="h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-4 border-orange-600 overflow-hidden shadow-2xl">
-                    {/* Level Badge */}
-                    <div className="absolute top-4 right-4 z-20 bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-xs font-black tracking-wider shadow-lg">
-                      {testimonial.level}
-                    </div>
+                <div
+                  className={`relative w-full h-full transition-transform duration-700 cursor-pointer`}
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    transform: flippedCards[testimonial.id] ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                  }}
+                >
+                  {/* FRONT - Transformation Images */}
+                  <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden' }}>
+                    <div className="h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-4 border-orange-600 overflow-hidden shadow-2xl">
+                      {/* Level Badge */}
+                      <div className="absolute top-4 right-4 z-20 bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-xs font-black tracking-wider shadow-lg">
+                        {testimonial.level}
+                      </div>
 
-                    {/* Before/After Split Images */}
-                    <div className="relative h-[400px] flex">
-                      <div className="w-1/2 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-900/50 z-10"></div>
-                        <Image
-                          src={testimonial.beforeImage}
-                          alt="Before transformation"
-                          fill
-                          className="object-cover grayscale"
-                        />
-                        <div className="absolute bottom-4 left-4 z-20 bg-slate-900/90 px-3 py-1 rounded-lg">
-                          <span className="text-blue-300 text-xs font-bold">BEFORE</span>
+                      {/* Before/After Split Images */}
+                      <div className="relative h-[400px] flex">
+                        <div className="w-1/2 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-900/50 z-10"></div>
+                          <Image
+                            src={testimonial.beforeImage}
+                            alt="Before transformation"
+                            fill
+                            className="object-cover grayscale"
+                          />
+                          <div className="absolute bottom-4 left-4 z-20 bg-slate-900/90 px-3 py-1 rounded-lg">
+                            <span className="text-blue-300 text-xs font-bold">BEFORE</span>
+                          </div>
+                        </div>
+                        <div className="w-1/2 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-slate-900/50 z-10"></div>
+                          <Image
+                            src={testimonial.afterImage}
+                            alt="After transformation"
+                            fill
+                            className="object-cover"
+                          />
+                          <div className="absolute bottom-4 right-4 z-20 bg-orange-600 px-3 py-1 rounded-lg">
+                            <span className="text-white text-xs font-bold">AFTER</span>
+                          </div>
                         </div>
                       </div>
-                      <div className="w-1/2 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-l from-transparent to-slate-900/50 z-10"></div>
-                        <Image
-                          src={testimonial.afterImage}
-                          alt="After transformation"
-                          fill
-                          className="object-cover"
-                        />
-                        <div className="absolute bottom-4 right-4 z-20 bg-orange-600 px-3 py-1 rounded-lg">
-                          <span className="text-white text-xs font-bold">AFTER</span>
+
+                      {/* Stats Grid */}
+                      <div className="p-6 space-y-4">
+                        {/* Profile */}
+                        <div className="flex items-center gap-4">
+                          <div className="relative w-16 h-16 rounded-full border-4 border-orange-600 overflow-hidden">
+                            <Image
+                              src={testimonial.avatar}
+                              alt={testimonial.name}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-black text-white">{testimonial.name}</h3>
+                            <p className="text-blue-300 text-sm">Age {testimonial.age} • Member</p>
+                          </div>
+                        </div>
+
+                        {/* Quote */}
+                        <blockquote className="text-yellow-400 font-bold italic text-lg leading-tight">
+                          &quot;{testimonial.quote}&quot;
+                        </blockquote>
+
+                        {/* Quick Stats */}
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="bg-slate-950/50 rounded-lg p-3 border border-orange-600/30">
+                            <div className="text-orange-600 text-2xl font-black">{testimonial.stats.weightChange}</div>
+                            <div className="text-blue-300 text-xs uppercase">Weight Change</div>
+                          </div>
+                          <div className="bg-slate-950/50 rounded-lg p-3 border border-blue-600/30">
+                            <div className="text-blue-400 text-2xl font-black">{testimonial.stats.strengthGain}</div>
+                            <div className="text-blue-300 text-xs uppercase">Strength Gain</div>
+                          </div>
+                        </div>
+
+                        {/* Progress Bar */}
+                        <div>
+                          <div className="flex justify-between text-xs text-blue-300 mb-2">
+                            <span className="font-bold">TRANSFORMATION PROGRESS</span>
+                            <span className="text-yellow-400 font-black">{testimonial.progressPercentage}%</span>
+                          </div>
+                          <div className="h-3 bg-slate-950 rounded-full overflow-hidden border border-blue-600/30">
+                            <div
+                              className="h-full bg-gradient-to-r from-orange-600 via-yellow-400 to-orange-600 rounded-full transition-all duration-1000"
+                              style={{ width: `${testimonial.progressPercentage}%` }}
+                            ></div>
+                          </div>
+                        </div>
+
+                        {/* Click Indicator */}
+                        <div className="text-center pt-2">
+                          <span className="text-blue-400 text-xs font-bold animate-pulse">
+                            👆 CLICK TO VIEW FULL STORY
+                          </span>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Stats Grid */}
-                    <div className="p-6 space-y-4">
-                      {/* Profile */}
-                      <div className="flex items-center gap-4">
-                        <div className="relative w-16 h-16 rounded-full border-4 border-orange-600 overflow-hidden">
+                  {/* BACK - Full Story & Achievements */}
+                  <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+                    <div className="h-full bg-gradient-to-br from-blue-900 via-slate-900 to-orange-900 rounded-2xl border-4 border-yellow-400 overflow-hidden shadow-2xl p-6 flex flex-col">
+                      {/* Header */}
+                      <div className="text-center mb-4">
+                        <div className="relative w-20 h-20 mx-auto mb-3 rounded-full border-4 border-yellow-400 overflow-hidden">
                           <Image
                             src={testimonial.avatar}
                             alt={testimonial.name}
@@ -226,164 +290,104 @@ export default function TestimonialsPage() {
                             className="object-cover"
                           />
                         </div>
-                        <div>
-                          <h3 className="text-xl font-black text-white">{testimonial.name}</h3>
-                          <p className="text-blue-300 text-sm">Age {testimonial.age} • Member</p>
+                        <h3 className="text-2xl font-black text-white">{testimonial.name}&apos;s Journey</h3>
+                        <div className="inline-block bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-xs font-black mt-2">
+                          {testimonial.level} LEVEL UNLOCKED
                         </div>
                       </div>
 
-                      {/* Quote */}
-                      <blockquote className="text-yellow-400 font-bold italic text-lg leading-tight">
-                        "{testimonial.quote}"
-                      </blockquote>
+                      {/* Full Story */}
+                      <div className="bg-slate-950/50 rounded-xl p-4 mb-4 border border-yellow-400/30">
+                        <p className="text-blue-100 text-sm leading-relaxed">
+                          {testimonial.story}
+                        </p>
+                      </div>
 
-                      {/* Quick Stats */}
-                      <div className="grid grid-cols-2 gap-3">
-                        <div className="bg-slate-950/50 rounded-lg p-3 border border-orange-600/30">
-                          <div className="text-orange-600 text-2xl font-black">{testimonial.stats.weightChange}</div>
-                          <div className="text-blue-300 text-xs uppercase">Weight Change</div>
-                        </div>
-                        <div className="bg-slate-950/50 rounded-lg p-3 border border-blue-600/30">
-                          <div className="text-blue-400 text-2xl font-black">{testimonial.stats.strengthGain}</div>
-                          <div className="text-blue-300 text-xs uppercase">Strength Gain</div>
+                      {/* Achievement Badges */}
+                      <div className="mb-4">
+                        <h4 className="text-yellow-400 font-black text-xs uppercase tracking-wider mb-3">
+                          🏅 Achievements Unlocked
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {testimonial.achievements.map((achievement, idx) => (
+                            <div
+                              key={idx}
+                              className={`${achievement.color} rounded-lg px-3 py-2 flex items-center gap-2 shadow-lg transform hover:scale-110 transition-transform`}
+                            >
+                              <span className="text-xl">{achievement.icon}</span>
+                              <span className="text-white text-xs font-bold">{achievement.label}</span>
+                            </div>
+                          ))}
                         </div>
                       </div>
 
-                      {/* Progress Bar */}
-                      <div>
-                        <div className="flex justify-between text-xs text-blue-300 mb-2">
-                          <span className="font-bold">TRANSFORMATION PROGRESS</span>
-                          <span className="text-yellow-400 font-black">{testimonial.progressPercentage}%</span>
+                      {/* Detailed Stats */}
+                      <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="bg-gradient-to-br from-orange-600/20 to-orange-600/5 rounded-lg p-3 border border-orange-600/50">
+                          <div className="text-orange-400 text-xl font-black">{testimonial.stats.monthsCommitted}</div>
+                          <div className="text-blue-200 text-xs">Months Committed</div>
                         </div>
-                        <div className="h-3 bg-slate-950 rounded-full overflow-hidden border border-blue-600/30">
-                          <div
-                            className="h-full bg-gradient-to-r from-orange-600 via-yellow-400 to-orange-600 rounded-full transition-all duration-1000"
-                            style={{ width: `${testimonial.progressPercentage}%` }}
-                          ></div>
+                        <div className="bg-gradient-to-br from-blue-600/20 to-blue-600/5 rounded-lg p-3 border border-blue-600/50">
+                          <div className="text-blue-400 text-xl font-black">{testimonial.stats.workoutsCompleted}</div>
+                          <div className="text-blue-200 text-xs">Workouts Done</div>
                         </div>
                       </div>
 
-                      {/* Click Indicator */}
-                      <div className="text-center pt-2">
-                        <span className="text-blue-400 text-xs font-bold animate-pulse">
-                          👆 CLICK TO VIEW FULL STORY
+                      {/* XP Bar */}
+                      <div className="bg-slate-950/50 rounded-xl p-4 border border-yellow-400/30">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-2xl">⚡</span>
+                          <span className="text-yellow-400 font-black text-xs uppercase">Experience Points</span>
+                        </div>
+                        <div className="h-4 bg-slate-900 rounded-full overflow-hidden border-2 border-yellow-400/50">
+                          <div className="h-full bg-gradient-to-r from-yellow-400 to-orange-600 rounded-full animate-pulse"></div>
+                        </div>
+                        <div className="text-center text-white font-black text-xs mt-2">
+                          LEVEL {testimonial.level} MAXED OUT
+                        </div>
+                      </div>
+
+                      {/* Click Back Indicator */}
+                      <div className="text-center mt-auto pt-4">
+                        <span className="text-yellow-400 text-xs font-bold animate-pulse">
+                          👆 CLICK TO FLIP BACK
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                {/* BACK - Full Story & Achievements */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180">
-                  <div className="h-full bg-gradient-to-br from-blue-900 via-slate-900 to-orange-900 rounded-2xl border-4 border-yellow-400 overflow-hidden shadow-2xl p-6 flex flex-col">
-                    {/* Header */}
-                    <div className="text-center mb-4">
-                      <div className="relative w-20 h-20 mx-auto mb-3 rounded-full border-4 border-yellow-400 overflow-hidden">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <h3 className="text-2xl font-black text-white">{testimonial.name}'s Journey</h3>
-                      <div className="inline-block bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-xs font-black mt-2">
-                        {testimonial.level} LEVEL UNLOCKED
-                      </div>
-                    </div>
-
-                    {/* Full Story */}
-                    <div className="bg-slate-950/50 rounded-xl p-4 mb-4 border border-yellow-400/30">
-                      <p className="text-blue-100 text-sm leading-relaxed">
-                        {testimonial.story}
-                      </p>
-                    </div>
-
-                    {/* Achievement Badges */}
-                    <div className="mb-4">
-                      <h4 className="text-yellow-400 font-black text-xs uppercase tracking-wider mb-3">
-                        🏅 Achievements Unlocked
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {testimonial.achievements.map((achievement, idx) => (
-                          <div
-                            key={idx}
-                            className={`${achievement.color} rounded-lg px-3 py-2 flex items-center gap-2 shadow-lg transform hover:scale-110 transition-transform`}
-                          >
-                            <span className="text-xl">{achievement.icon}</span>
-                            <span className="text-white text-xs font-bold">{achievement.label}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Detailed Stats */}
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="bg-gradient-to-br from-orange-600/20 to-orange-600/5 rounded-lg p-3 border border-orange-600/50">
-                        <div className="text-orange-400 text-xl font-black">{testimonial.stats.monthsCommitted}</div>
-                        <div className="text-blue-200 text-xs">Months Committed</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-blue-600/20 to-blue-600/5 rounded-lg p-3 border border-blue-600/50">
-                        <div className="text-blue-400 text-xl font-black">{testimonial.stats.workoutsCompleted}</div>
-                        <div className="text-blue-200 text-xs">Workouts Done</div>
-                      </div>
-                    </div>
-
-                    {/* XP Bar */}
-                    <div className="bg-slate-950/50 rounded-xl p-4 border border-yellow-400/30">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-2xl">⚡</span>
-                        <span className="text-yellow-400 font-black text-xs uppercase">Experience Points</span>
-                      </div>
-                      <div className="h-4 bg-slate-900 rounded-full overflow-hidden border-2 border-yellow-400/50">
-                        <div className="h-full bg-gradient-to-r from-yellow-400 to-orange-600 rounded-full animate-pulse"></div>
-                      </div>
-                      <div className="text-center text-white font-black text-xs mt-2">
-                        LEVEL {testimonial.level} MAXED OUT
-                      </div>
-                    </div>
-
-                    {/* Click Back Indicator */}
-                    <div className="text-center mt-auto pt-4">
-                      <span className="text-yellow-400 text-xs font-bold animate-pulse">
-                        👆 CLICK TO FLIP BACK
-                      </span>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-orange-600 via-yellow-400 to-orange-600 rounded-2xl p-12 border-4 border-yellow-400 shadow-2xl">
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
-            YOUR TRANSFORMATION STARTS NOW
-          </h2>
-          <p className="text-slate-800 text-xl font-bold mb-6 max-w-2xl mx-auto">
-            Join the FitForce community and unlock your own achievement story. Every legend started as a beginner.
-          </p>
-          <button className="bg-slate-900 text-white px-12 py-5 rounded-full text-xl font-black uppercase tracking-wider hover:bg-blue-600 transform hover:scale-105 transition-all shadow-xl border-4 border-slate-900 hover:border-blue-600">
-            🚀 Begin Your Journey
-          </button>
+          {/* Call to Action */}
+          <div className="text-center bg-gradient-to-r from-orange-600 via-yellow-400 to-orange-600 rounded-2xl p-12 border-4 border-yellow-400 shadow-2xl">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+              YOUR TRANSFORMATION STARTS NOW
+            </h2>
+            <p className="text-slate-800 text-xl font-bold mb-6 max-w-2xl mx-auto">
+              Join the FitForce community and unlock your own achievement story. Every legend started as a beginner.
+            </p>
+            <button className="bg-slate-900 text-white px-12 py-5 rounded-full text-xl font-black uppercase tracking-wider hover:bg-blue-600 transform hover:scale-105 transition-all shadow-xl border-4 border-slate-900 hover:border-blue-600">
+              🚀 Begin Your Journey
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
 
       <style jsx global>{`
-        .perspective-1000 {
-          perspective: 1000px;
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
         }
-        .transform-style-3d {
-          transform-style: preserve-3d;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
+        .animate-pulse {
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
       `}</style>
-    </section>
+    </>
   );
 }
